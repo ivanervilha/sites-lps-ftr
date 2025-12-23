@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
     'garagem51.local',
     'www.garagem51.local',
   ],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

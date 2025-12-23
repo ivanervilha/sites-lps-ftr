@@ -29,7 +29,7 @@ const Authority = () => {
                     <div className="relative group order-2 md:order-1">
                         <div className="absolute -inset-1 bg-gradient-to-r from-garage-gold to-garage-red rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                         <div className="aspect-[4/5] rounded-xl overflow-hidden border border-slate-700 bg-slate-800 relative shadow-2xl">
-                            <img src={ELOIR_IMAGE_URL} alt="Eloir" className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onError={(e) => { e.currentTarget.src = FALLBACK_IMAGE; }} />
+                            <img src={ELOIR_IMAGE_URL} alt="Eloir" width={400} height={500} className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onError={(e) => { e.currentTarget.src = FALLBACK_IMAGE; }} />
                             <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent p-6 pt-20">
                                 <h3 className="text-white font-display text-3xl font-bold uppercase">Eloir</h3>
                                 <p className="text-garage-gold font-medium">Fundador Garagem 51</p>

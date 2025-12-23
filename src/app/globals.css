@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;700&display=swap');
-
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Oswald', sans-serif;
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-display: var(--font-oswald), 'Oswald', sans-serif;
 
   --color-garage-dark: #0f1419;
   --color-garage-red: #e63946;

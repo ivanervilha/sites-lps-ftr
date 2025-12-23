@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ShieldCheck, CheckCircle2, Wrench } from 'lucide-react';
 
@@ -8,8 +9,17 @@ const Hero = () => {
 
     return (
         <section className="relative w-full pt-0 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-garage-dark border-b border-slate-800">
-            {/* Background Effect */}
-            <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center mix-blend-overlay"></div>
+            {/* Background Effect - Using next/image for LCP discovery */}
+            <div className="absolute inset-0 z-0 opacity-10 mix-blend-overlay">
+                <Image
+                    src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2000&auto=format&fit=crop"
+                    alt=""
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center"
+                />
+            </div>
 
             <div className="container mx-auto px-4 relative z-10 max-w-7xl">
 
@@ -25,6 +35,9 @@ const Hero = () => {
                         <img
                             src={ELOIR_IMAGE_URL}
                             alt="Eloir"
+                            width={734}
+                            height={887}
+                            fetchPriority="high"
                             className="w-full h-full object-cover object-top scale-100"
                             onError={(e) => {
                                 e.currentTarget.src = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop";
@@ -165,6 +178,9 @@ const Hero = () => {
                                 <img
                                     src={ELOIR_IMAGE_URL}
                                     alt="Eloir - Criador do Método"
+                                    width={598}
+                                    height={722}
+                                    fetchPriority="high"
                                     className="w-full h-auto object-cover object-top"
                                     style={{ objectPosition: 'center 20%' }}
                                     onError={(e) => {
