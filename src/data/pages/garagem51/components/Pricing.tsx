@@ -36,7 +36,7 @@ const Pricing: React.FC<PricingProps> = ({ isRepeated }) => (
                         <span className="text-6xl font-display font-bold text-garage-green">67</span>
                     </div>
                     <div className="text-slate-500 font-medium mb-8">ou 12x de <span className="font-bold text-slate-900">R$ 6,70</span></div>
-                    <a href="https://pay.hotmart.com/S103327101R?sck=HOTMART_PRODUCT_PAGE&off=axxej2qv&hotfeature=32&bid=1766460571234" className="w-full bg-garage-green hover:bg-green-600 text-garage-dark font-bold text-xl py-4 rounded shadow-lg transform hover:-translate-y-1 transition-all uppercase font-display flex items-center justify-center gap-2">
+                    <a href="https://pay.hotmart.com/S103327101R" className="w-full bg-garage-green hover:bg-green-600 text-garage-dark font-bold text-xl py-4 rounded shadow-lg transform hover:-translate-y-1 transition-all uppercase font-display flex items-center justify-center gap-2">
                         Sim, Quero Comprar com Segurança
                         <ShieldCheck size={24} />
                     </a>

@@ -37,7 +37,7 @@ const Decision = () => (
             </div>
             <div className="text-center max-w-2xl mx-auto">
                 <p className="text-slate-300 text-lg mb-6">O que separa você de uma compra segura são apenas <span className="text-garage-green font-bold text-2xl">R$ 67</span>.<br /><span className="text-sm text-slate-500 mt-2 block">Quanto custa o prejuízo de comprar errado? R$ 5.000? R$ 15.000? R$ 45.000?</span></p>
-                <a href="https://pay.hotmart.com/S103327101R?sck=HOTMART_PRODUCT_PAGE&off=axxej2qv&hotfeature=32&bid=1766460571234" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-garage-dark transition-all duration-200 bg-garage-green hover:bg-green-600 font-display uppercase tracking-wider rounded shadow-lg hover:-translate-y-1 gap-2 w-full md:w-auto">QUERO A OPÇÃO 2 — COMPRAR COM SEGURANÇA <ArrowRight size={20} /></a>
+                <a href="https://pay.hotmart.com/S103327101R" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-garage-dark transition-all duration-200 bg-garage-green hover:bg-green-600 font-display uppercase tracking-wider rounded shadow-lg hover:-translate-y-1 gap-2 w-full md:w-auto">QUERO A OPÇÃO 2 — COMPRAR COM SEGURANÇA <ArrowRight size={20} /></a>
             </div>
         </div>
     </section>

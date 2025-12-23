@@ -136,7 +136,7 @@ const Hero = () => {
                             transition={{ delay: 0.6 }}
                             className="flex flex-col items-center lg:items-start gap-4"
                         >
-                            <a href="https://pay.hotmart.com/S103327101R?sck=HOTMART_PRODUCT_PAGE&off=axxej2qv&hotfeature=32&bid=1766460571234" className="group relative inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-5 text-lg md:text-xl font-bold text-garage-dark transition-all duration-200 bg-garage-green font-display uppercase tracking-wider rounded shadow-[0_0_20px_rgba(46,204,113,0.3)] hover:shadow-[0_0_30px_rgba(46,204,113,0.6)] hover:bg-green-600 hover:-translate-y-1 w-full md:w-auto text-shadow-sm">
+                            <a href="https://pay.hotmart.com/S103327101R" className="group relative inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-5 text-lg md:text-xl font-bold text-garage-dark transition-all duration-200 bg-garage-green font-display uppercase tracking-wider rounded shadow-[0_0_20px_rgba(46,204,113,0.3)] hover:shadow-[0_0_30px_rgba(46,204,113,0.6)] hover:bg-green-600 hover:-translate-y-1 w-full md:w-auto text-shadow-sm">
                                 <span className="absolute inset-0 w-full h-full -mt-1 rounded opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
                                 <span className="relative flex items-center justify-center gap-2">
                                     QUERO COMPRAR COM SEGURANÇA

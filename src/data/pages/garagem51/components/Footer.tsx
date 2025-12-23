@@ -20,7 +20,7 @@ const Footer = () => (
                     <p className="text-white font-bold">E em Janeiro/2026, o Eloir no seu bolso com a IA Garagem 51.</p>
                     <p>Garantia de 7 dias.</p>
                 </div>
-                <a href="https://pay.hotmart.com/S103327101R?sck=HOTMART_PRODUCT_PAGE&off=axxej2qv&hotfeature=32&bid=1766460571234" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-garage-dark transition-all duration-200 bg-garage-green font-display uppercase tracking-wider rounded shadow-lg hover:bg-green-600 hover:-translate-y-1 gap-2">
+                <a href="https://pay.hotmart.com/S103327101R" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-garage-dark transition-all duration-200 bg-garage-green font-display uppercase tracking-wider rounded shadow-lg hover:bg-green-600 hover:-translate-y-1 gap-2">
                     QUERO O COMPRA SEGURA POR R$ 67
                     <ShieldCheck size={20} />
                 </a>
