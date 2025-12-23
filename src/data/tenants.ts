@@ -18,6 +18,20 @@ export const tenants: Tenant[] = [
     ],
     campaigns: ['comprasegura'],
   },
+  {
+    id: 'garagem51',
+    name: 'Garagem 51',
+    primaryDomain: 'garagem51.com.br',
+    domains: [
+      'garagem51.com.br',
+      'www.garagem51.com.br',
+      'garagem51.valoremfisioterapia.com.br',
+      // Local testing domains (remove in production if desired)
+      'garagem51.local',
+      'www.garagem51.local',
+    ],
+    campaigns: ['comprasegura'],
+  },
 ];
 
 /**

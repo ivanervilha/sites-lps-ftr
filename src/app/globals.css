@@ -1,42 +1,43 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+
+  --color-garage-dark: #0f1419;
+  --color-garage-red: #e63946;
+  --color-garage-gold: #f4a426;
+  --color-garage-green: #2ecc71;
+  --color-garage-gray: #1e293b;
+
+  --animate-infinite: infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom Utilities from Original Project */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
+/* Base resets to match original styling */
+@layer base {
   html {
-    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0f1419;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

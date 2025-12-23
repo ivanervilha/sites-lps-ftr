@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { resolveTenantByHost, getTenantById, hasCampaign } from '@/data/tenants';
+import { resolveTenantByHost, hasCampaign } from '@/data/tenants';
+
+// Reserved tenant ID for 404 pages
+const NOT_FOUND_TENANT = '__notfound';
 
 export function middleware(request: NextRequest) {
     const host = request.headers.get('host') || '';
@@ -10,7 +13,7 @@ export function middleware(request: NextRequest) {
     if (
         pathname.startsWith('/_next') ||
         pathname.startsWith('/api') ||
-        pathname.startsWith('/_t') ||
+        pathname.startsWith('/sites') ||
         pathname.includes('.') // static files
     ) {
         return NextResponse.next();
@@ -20,27 +23,32 @@ export function middleware(request: NextRequest) {
     const tenant = resolveTenantByHost(host);
 
     if (!tenant) {
-        // Tenant not found - show 404
-        return NextResponse.rewrite(new URL('/not-found', request.url));
+        // Tenant not found - rewrite to reserved 404 tenant
+        return NextResponse.rewrite(
+            new URL(`/sites/${NOT_FOUND_TENANT}`, request.url)
+        );
     }
 
     // Rewrite to internal tenant routes
     if (pathname === '/') {
-        // Home page: / → /_t/{tenantId}
+        // Home page: / → /sites/{tenantId}
         return NextResponse.rewrite(
-            new URL(`/_t/${tenant.id}`, request.url)
+            new URL(`/sites/${tenant.id}`, request.url)
         );
     } else {
-        // Campaign page: /{slug} → /_t/{tenantId}/{slug}
+        // Campaign page: /{slug} → /sites/{tenantId}/{slug}
         const slug = pathname.slice(1); // Remove leading slash
 
         // Check if campaign exists
         if (!hasCampaign(tenant.id, slug)) {
-            return NextResponse.rewrite(new URL('/not-found', request.url));
+            // Campaign not found - rewrite to reserved 404 tenant
+            return NextResponse.rewrite(
+                new URL(`/sites/${NOT_FOUND_TENANT}`, request.url)
+            );
         }
 
         return NextResponse.rewrite(
-            new URL(`/_t/${tenant.id}/${slug}`, request.url)
+            new URL(`/sites/${tenant.id}/${slug}`, request.url)
         );
     }
 }
